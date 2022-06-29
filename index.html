@@ -20,10 +20,34 @@ axios     axios-http.com
         <h1>Weather App</h1>
     </nav>
 
-<form onsubmit="myFunction">
+<form onsubmit="myFunction(); return false">
     <input type="text" id="city" placeholder="Enter your City name">
     <button type="submit">Get Weather</button>
 </form>
+
+<!-- <div id="weather_icon"></div> -->
+<img src="" alt="" id="weather_icon">
+<div id="temp"></div>
+<div id="feels_like"></div>
+<div id="city_name"></div>
+<div id="weather_condition"></div>
+<div id="humidity"></div>
+<div id="cloud"></div>
+<div id="temp_f"></div>
+<div id="wind"></div>
+<div id="visibility"></div>
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="./script.js"></script>
 </body>
 </html>
