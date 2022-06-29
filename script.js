@@ -7,8 +7,10 @@ let myFunction = () =>{
         const data = response.data;
 
         console.log(data);
-
-        document.querySelector("#weather_icon").src = data.current.condition.icon;
+       
+       let icon = data.current.condition.icon;
+       icon.replace("/file// ");
+        document.querySelector("#weather_icon").src = icon;
     document.querySelector("#tempC").innerText = data.current.temp_c + "°C";
     document.querySelector("#tempF").innerText = data.current.temp_f + "°F";
 
