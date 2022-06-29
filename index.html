@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- should be responsive
 how to call labraiy in JS 
 .json
@@ -19,9 +20,10 @@ axios     axios-http.com
         <h1>Weather App</h1>
     </nav>
 
-
+<form onsubmit="myFunction">
     <input type="text" id="city" placeholder="Enter your City name">
-    <button>Get Weather</button>
+    <button type="submit">Get Weather</button>
+</form>
     <script src="./script.js"></script>
 </body>
 </html>
