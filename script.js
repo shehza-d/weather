@@ -1,7 +1,7 @@
 let myFunction = () =>{
 
     let cityy = document.querySelector("#city").value;
-    axios.get(`http://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${cityy}`)
+    axios.get(`https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${cityy}`)
     .then(function (response) {
         // handle success
         const data = response.data;
