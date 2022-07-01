@@ -1,8 +1,15 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     font-family: 'Roboto', sans-serif;
+} */
+
+body{
+    margin: 0px;
+}
+.nav-bar > h1{
+    margin: 0px;
 }
 
 /* body {
@@ -10,7 +17,7 @@
 } */
 
 .nav-bar {
-    height: 100px;
+    /* height: 100px; */
     width: 100%;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -22,8 +29,8 @@
 
 /* isper lagani hy media querry */
 .body_padding_div {
-    margin-left: 20%;
-    margin-right: 20%;
+    /* margin-left: 20%;
+    margin-right: 20%; */
     /* overflow: visible; */
     height: 100vh;
 }
@@ -57,6 +64,9 @@
     justify-content: center;
     margin: 18px;
     padding: 18px;
+}
+.image{
+    width: 172px;
 }
 
 .flex {
@@ -97,7 +107,7 @@ footer {
     padding: 18px 0px;
     align-items: center;
 }
-}
+
 /* 
 footer>p {
     color: white;
@@ -105,3 +115,9 @@ footer>p {
     padding-bottom: 15px;
     font-size: 20px;
 } */
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
