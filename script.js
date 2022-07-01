@@ -10,7 +10,7 @@ let myFunction = () => {
 
             let icon = data.current.condition.icon;
             icon.replace("/file// ");
-            console.log(icon);
+            // console.log(icon);
             document.querySelector("#weather_icon").src = icon;
 
 

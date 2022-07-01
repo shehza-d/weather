@@ -1,58 +1,29 @@
-body {
-	background-color: rgb(46, 241, 248);
+
+.body_padding_div {
+    margin-left: 2%;
+    margin-right: 2%;
 }
-
-* {
-	margin: 0;
-	padding: 0;
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-	font-family: 'Roboto', sans-serif;
-}
-
-.nav-bar {
-	height: 100px;
-	width: 100%;
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-}
-
-.nav-bar>h1 {
-	padding: 20px;
-}
-
-/* isper lagani hy media querry */
-
-.formm {
-	margin: 25px;
-	display: flex;
-	justify-content: center;
-}
-
-.formm>button {
-	border-radius: 50px;
-	padding: 15px;
-}
-
-#city {
-	padding: 15px;
-	border-radius: 50px;
-}
-
-/* div{    border: 2px solid red  ;} */
 #tempC {
-	font-size: 100px;
-	font-weight: bold;
-	color: rgb(80, 77, 77);
-	margin-left: 10px;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(80, 77, 77);
+    /* margin-left: 10px; */
+}
+footer {
+    position: sticky;
+    /* position: absolute; */
+    /* display: flex; */
+    /* justify-content: center; */
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: rgb(14, 154, 224);
 }
 
-.main_container {
-	display: flex;
-	justify-content: center;
-	margin: 18px;
-	padding: 18px;
-}
-
-.flex {
-	display: flex;
+footer>p {
+    color: rgb(255, 255, 255);
+	display: inline;
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    font-size: 15px;
 }
