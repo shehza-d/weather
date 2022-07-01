@@ -15,9 +15,9 @@ let myFunction = () =>{
 
 
 
-        
+
     document.querySelector("#tempC").innerText = data.current.temp_c + "°C";
-    document.querySelector("#tempF").innerText = data.current.temp_f + "°F";
+    document.querySelector("#tempF").innerText = "Fahrenheit : "+data.current.temp_f + "°F";
 
 
     document.querySelector("#city_name").innerText = data.location.name + ", " + data.location.region+ ", " + data.location.country;
