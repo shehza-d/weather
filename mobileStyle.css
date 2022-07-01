@@ -1,4 +1,6 @@
-
+body{
+	background-color: blue;
+}
 .body_padding_div {
     margin-left: 2%;
     margin-right: 2%;
@@ -9,14 +11,21 @@
     color: rgb(80, 77, 77);
     /* margin-left: 10px; */
 }
+.nav-bar>h1 {
+   text-align: center;
+}
+#weather_icon{
+    width: 84px;
+}
 footer {
     position: sticky;
     /* position: absolute; */
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
+	flex-direction: column;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: rgb(14, 154, 224);
 }
 
@@ -26,4 +35,9 @@ footer>p {
     /* padding-top: 15px; */
     /* padding-bottom: 15px; */
     font-size: 15px;
+	margin: 8px;
+}
+details{
+	display: flex;
+	flex-direction: column;
 }
