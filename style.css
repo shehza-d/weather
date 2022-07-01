@@ -31,7 +31,7 @@ padding: 15px;
     padding: 15px;
     border-radius: 50px;
 }
-div{    border: 2px solid red  ;}
+/* div{    border: 2px solid red  ;} */
 #tempC{
     font-size: 100px;
     font-weight: bold;
