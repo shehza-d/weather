@@ -1,6 +1,6 @@
-body{
+/* body{
 	background-color: blue;
-}
+} */
 .body_padding_div {
     margin-left: 2%;
     margin-right: 2%;
@@ -37,7 +37,8 @@ footer>p {
     font-size: 15px;
 	margin: 8px;
 }
-details{
+.details{
 	display: flex;
 	flex-direction: column;
+    justify-content: center;
 }

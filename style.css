@@ -69,12 +69,29 @@ body{
 #weather_icon{
     width: 172px;
 }
+.left, .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px;
+}
 
 .flex {
     display: flex;
     justify-content: space-around;
 }
 
+
+
+
+
+/* footer */
 .iconscontainer {
     list-style: none;
     display: flex;
@@ -109,17 +126,10 @@ footer {
     align-items: center;
 }
 
-/* 
+
 footer>p {
     color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
     font-size: 20px;
-} */
-
-.details{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 15px;
-}
+} 
