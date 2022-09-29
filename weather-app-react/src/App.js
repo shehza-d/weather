@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import WeatherApp from './components/weather'
 
 function App() {
   return (
     <div className="App">
-      <Weather/>
+      <WeatherApp/>
+
+
     </div>
   );
 }
