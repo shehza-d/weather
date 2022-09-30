@@ -1,8 +1,25 @@
-
+import { useState } from "react"
 
 
 
 const WeatherApp = () => {
+
+	const [city, setCity]= useState("karachi");
+	
+	const myGetDataFunction = async () => {
+await fetch(`https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`)
+			.then(response => response.json())
+			.then(json => {
+				console.log(json)
+				// document.querySelector('#userName').innerHTML = `My name is ${json?.name}`
+			})
+			.catch(reject => console.log(reject))
+	}
+		myGetDataFunction();
+
+
+
+
 
 	return (
 		<>
