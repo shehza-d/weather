@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 const WeatherApp = () => {
   const [city, setCity] = useState("karachi");
@@ -10,9 +10,10 @@ const WeatherApp = () => {
     (async () => {
       await navigator.geolocation.getCurrentPosition(async (success) => {
         const { latitude, longitude } = success.coords;
-        await axios.get(
-          `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
-        )
+        await axios
+          .get(
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
+          )
           // .then((res) => res.json())
           .then((data) => {
             console.log(data);
@@ -24,16 +25,16 @@ const WeatherApp = () => {
 
   console.log(city);
 
-  const getWeatherData = async (e) => {
+  const getWeatherData = async (e: any) => {
     e.preventDefault();
     console.log("first");
-    await axios.get(
-
+    await axios
+      .get(
         //  `https://api.openweathermap.org/data/2.5/forecast?&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
         //  `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`
-          `https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`
-      // `https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`
-    )
+        `https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`
+        // `https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`
+      )
       // .then((response) => response.json())
       .then((json) => {
         console.log(json.data);
