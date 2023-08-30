@@ -12,7 +12,7 @@ export default function Navbar() {
   });
 
   return (
-    <nav className="p-10 mb-2 w-full backdrop-blur flex h-16 items-center justify-between text-white bg-black/50">
+    <nav className="p-8 backdrop-blur flex h-16 items-center justify-between text-white  bg-black/50">
       <h1 className="text-2xl">Weather App</h1>
 
       <div>
