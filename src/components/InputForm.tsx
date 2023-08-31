@@ -22,7 +22,7 @@ export default function InputForm({
 
     try {
       const { data } = await axios.get<WeatherResObject>(
-        `${URL}/forecast?q=${city}&appid=${API_KEY}&units=metric`,
+        `${URL}/forecast?q=${city}&appid=${API_KEY}&units=metric`
       );
       console.log("🚀 ~ file: InputForm.tsx:24 ~ getWeatherData ~ data:", data);
 
