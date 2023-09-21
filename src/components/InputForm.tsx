@@ -6,10 +6,12 @@ import toast from "react-hot-toast";
 
 export default function InputForm({
   setWeatherData,
+  setMessage,
   URL,
   API_KEY,
 }: {
   setWeatherData: Dispatch<SetStateAction<DataList[] | null>>;
+  setMessage: Dispatch<SetStateAction<string>>;
   URL: string;
   API_KEY: string;
 }) {
@@ -17,23 +19,36 @@ export default function InputForm({
 
   const getWeatherData = async (event: any) => {
     event.preventDefault();
+
     const city = inputRef?.current?.value;
-    console.log(city);
+
+    if (!city) return;
+
+    // setMessage("Loading...");
 
     try {
+      toast.loading("Loading...");
+
       const { data } = await axios.get<WeatherResObject>(
         `${URL}/forecast?q=${city}&appid=${API_KEY}&units=metric`
+        // "https://learning-chatbot-393109.lm.r.appspot.com/waiting"
       );
+
       console.log("🚀 ~ file: InputForm.tsx:24 ~ getWeatherData ~ data:", data);
 
-      if (inputRef.current) inputRef.current.value = "";
+      // if (inputRef.current) inputRef.current.value = "";
+      event.target.reset();
 
       setWeatherData((prev) => {
         if (prev === null) return [{ ...data.list[1], city: data.city.name }];
         else return [{ ...data.list[1], city: data.city.name }, ...prev];
       });
+      setMessage("");
+      toast.dismiss();
     } catch (err: any) {
+      toast.dismiss();
       toast.error(err?.response?.data?.message || "Something went wrong");
+
       console.log("🚀 ~ file: weather.tsx:36 ~ getWeatherData ~ err:", err);
     }
   };
